@@ -1,0 +1,63 @@
+{
+   "query":{
+      "bool":{
+         "must": [
+           {
+             "terms": {
+               "extendedMsn": [
+                 "@@@ExtendedMsn List@@@"
+               ]
+             }
+           }
+         ],
+         "must_not": [
+           {
+             "terms": {
+               "messageType.keyword": [
+                 "@@@Exclude Messages@@@"
+               ]
+             }
+           }
+         ]
+      }
+   },
+   "size":0,
+   "aggs":{
+      "by_extendedMsn":{
+         "terms":{
+            "field":"extendedMsn"
+         },
+         "aggs":{
+            "by_messageType":{
+               "terms":{
+                  "field":"messageType.keyword",
+                  "size":2
+               },
+               "aggs":{
+                  "latest_event":{
+                     "top_hits":{
+                        "size":1,
+                        "_source":{
+                           "includes":[
+                              "extendedMsn",
+                              "receptionDate",
+                              "messageType",
+                              "flightNumber",
+                              "messageSubType"
+                           ]
+                        },
+                        "sort":[
+                           {
+                              "receptionDate":{
+                                 "order":"asc"
+                              }
+                           }
+                        ]
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}
