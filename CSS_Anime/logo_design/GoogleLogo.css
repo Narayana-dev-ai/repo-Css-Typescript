@@ -1,0 +1,33 @@
+.container {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  border-top: 15px solid #ea4335;
+  border-right: 15px solid #4285fa;
+  border-left: 15px solid #fbbc05;
+  border-bottom: 15px solid #34a853;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.container::before {
+  content: "";  
+  position: absolute;
+  background-color: #4285fa;
+  width: 40px;
+  height: 15px;
+  top: 50%;
+  right: -13px;
+  transform: translateY(-65%);
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -15px;
+  right: -13px;
+  border-top: 55px solid transparent;
+  border-right: 48px solid black;
+}

@@ -1,0 +1,37 @@
+.container {
+  width: 900px;
+  height: 300px;
+  display: flex;
+  overflow: hidden;
+  border-radius: 15px;
+
+  .card {
+    flex: 1;
+    height: 100%;
+    transition: flex 0.5s ease;
+    cursor: pointer;
+  }
+
+  .card1 {
+    background-color: red;
+  }
+  .card2 {
+    background-color: green;
+  }
+  .card3 {
+    background-color: blue;
+  }
+  .card4 {
+    background-color: pink;
+  }
+  .card5 {
+    background-color: yellow;
+  }
+  .card6 {
+    background-color: brown;
+  }
+
+  .card:hover {
+    flex: 3;
+  }
+}

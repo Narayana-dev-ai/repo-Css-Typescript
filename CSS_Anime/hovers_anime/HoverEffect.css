@@ -1,0 +1,51 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  .card {
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    border-radius: 10px;
+    transition: 2s ease;
+  }
+
+  .card1:hover {
+    transform: rotate(360deg);
+  }
+
+  .card2:hover {
+    transform: rotateX(360deg);
+  }
+
+  .card3:hover {
+    transform: rotateY(360deg);
+  }
+
+  .card4:hover {
+    transform: scale(1.3);
+  }
+
+  .card5:hover {
+    transform: scaleX(1.3);
+  }
+
+  .card6:hover {
+    transform: scaleY(1.3);
+  }
+
+  .card7:hover {
+    transform: translate(100%);
+  }
+
+  .card8:hover {
+    transform: translateY(100%);
+  }
+}

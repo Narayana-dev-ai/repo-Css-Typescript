@@ -1,0 +1,20 @@
+.loader {
+  position: relative;
+  font-size: 50px;
+}
+
+.loader::before,
+.loader::after {
+  content: "Narayana";
+  position: absolute;
+}
+
+.loader:after {
+  animation: anime 1s infinite;
+}
+@keyframes anime {
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
