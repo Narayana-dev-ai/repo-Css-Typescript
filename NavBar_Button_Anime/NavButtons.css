@@ -1,0 +1,44 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.icon {
+  width: 6rem;
+  height: 3rem;
+  border-radius: 5px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.icon:hover {
+  scale: 1.2;
+  color: red;
+}
+
+.icon:hover::before {
+  background: blue;
+  content: "";
+  position: absolute;
+  width: 140%;
+  height: 120%;
+  transform: rotate(45deg);
+  animation: slide 0.7s forwards;
+}
+
+@keyframes slide {
+  50% {
+    left: 10%;
+    top: -40%;
+  }
+  100% {
+    left: 100%;
+    top: -20%;
+  }
+}
