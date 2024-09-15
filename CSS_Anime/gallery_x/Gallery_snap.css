@@ -1,0 +1,30 @@
+.container {
+  width: 400px;
+  height: 200px;
+  display: flex;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+
+  .item {
+    display: grid;
+    place-items: center;
+    min-width: 100%;
+    scroll-snap-align: start;
+  }
+
+  .item1 {
+    background-color: lightblue;
+  }
+
+  .item2 {
+    background-color: lightgreen;
+  }
+
+  .item3 {
+    background-color: lightyellow;
+  }
+
+  .item4 {
+    background-color: lightsalmon;
+  }
+}
