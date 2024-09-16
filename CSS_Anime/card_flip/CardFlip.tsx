@@ -6,7 +6,7 @@ export const CardFlip = () => {
       <div className="flip-card-inner">
         <div className="flip-card-front">
           <h1>
-            Sharmi Love's Narayana{" "}
+            I need You{" "}
             <>
               <>&#10084;&#65039;</>
             </>
@@ -14,7 +14,7 @@ export const CardFlip = () => {
         </div>
         <div className="flip-card-back">
           <h1>
-            Narayana Love's Sharmi{" "}
+            You need Me{" "}
             <>
               <>&#10084;&#65039;</>
             </>
