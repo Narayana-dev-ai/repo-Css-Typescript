@@ -1,0 +1,18 @@
+{
+  "name": "appscript_prcel",
+  "version": "1.0.0",
+  "description": "this is my first appscript work",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pull": "clasp pull",
+    "push": "clasp push",
+    "deploy": "clasp deploy --description TEST1 --deploymentId AKfycbxmItV5V7gTxqQs5nbUGEDexl22AiPNM0TqQ2d2FHyGAcuJrek6XLqMezD8ZCrwdOsWag"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@google/clasp": "^2.4.2"
+  }
+}
