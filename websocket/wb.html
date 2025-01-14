@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Client</title>
+</head>
+<body>
+    <h1>WebSocket Two-Way Communication</h1>
+    <input type="text" id="messageInput" placeholder="Type a message...">
+    <button onclick="sendMessage()">Send</button>
+    <pre id="output"></pre>
+
+    <script>
+        // Connect to the WebSocket server
+        const ws = new WebSocket('ws://localhost:8080');
+
+        // Handle incoming messages from the server
+        ws.onmessage = (event) => {
+            const output = document.getElementById('output');
+            output.textContent += `Server: ${event.data}\n`;
+        };
+
+        // Send a message to the server
+        function sendMessage() {
+            const input = document.getElementById('messageInput');
+            const message = input.value;
+            ws.send(message);
+            input.value = ''; // Clear the input field
+        }
+    </script>
+</body>
+</html>
