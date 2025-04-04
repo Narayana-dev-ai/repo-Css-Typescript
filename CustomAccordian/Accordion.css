@@ -1,0 +1,28 @@
+.accordion {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 20px 0;
+  }
+  
+  .title {
+    padding: 15px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .title.active {
+    background-color: #ddd;
+  }
+  
+  .content {
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  
+  .content.active {
+    max-height: 100px; /* Adjust this value as needed */
+    transition: max-height 0.2s ease-in;
+  }
