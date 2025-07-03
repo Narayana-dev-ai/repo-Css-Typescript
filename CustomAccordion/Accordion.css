@@ -1,0 +1,27 @@
+.ui.styled.accordion {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.title {
+  padding: 15px;
+  cursor: pointer;
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #ddd;
+}
+
+.title.active {
+  background-color: #ddd;
+}
+
+.content {
+  padding: 0 15px;
+  display: none;
+  background-color: white;
+  border-top: none;
+}
+
+.content.active {
+  display: block;
+}
