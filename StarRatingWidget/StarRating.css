@@ -1,0 +1,22 @@
+.star-rating {
+  display: flex;
+  flex-direction: row;
+}
+
+.star-rating button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.star-rating .star {
+  font-size: 2rem;
+  color: #ddd;
+}
+
+.star-rating .on .star {
+  color: #f39c12;
+}
